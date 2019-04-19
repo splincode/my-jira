@@ -1,0 +1,9 @@
+.title {
+  background: transparent;
+  color: #fff;
+}
+
+.menu__item a {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,28 @@
+
+<mat-toolbar class="board-list">Board</mat-toolbar>
+
+<div class="column-list" fxLayout="row" fxLayoutAlign="space-between center" cdkDropListGroup>
+  <div class="column" cdkDropList [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)">
+    Todo
+
+    <mat-card class="column-item" *ngFor="let item of todo" cdkDrag>{{item}}</mat-card>
+  </div>
+
+  <div class="column" cdkDropList [cdkDropListData]="inProgress" (cdkDropListDropped)="drop($event)">
+    In progress
+
+    <mat-card class="column-item" *ngFor="let item of inProgress" cdkDrag>{{item}}</mat-card>
+  </div>
+
+  <div class="column" cdkDropList [cdkDropListData]="testing" (cdkDropListDropped)="drop($event)">
+    Testing
+
+    <mat-card class="column-item" *ngFor="let item of testing" cdkDrag>{{item}}</mat-card>
+  </div>
+
+  <div class="column" cdkDropList [cdkDropListData]="done" (cdkDropListDropped)="drop($event)">
+    Done
+
+    <mat-card class="column-item" *ngFor="let item of done" cdkDrag>{{item}}</mat-card>
+  </div>
+</div>
